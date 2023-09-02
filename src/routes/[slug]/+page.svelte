@@ -2,17 +2,14 @@
 	import { MY_TWITTER_HANDLE, SITE_URL } from '$lib/siteConfig';
 	// import Comments from '../../components/Comments.svelte';
 
-	import 'prism-themes/themes/prism-shades-of-purple.min.css';
-	import Newsletter from '../../components/Newsletter.svelte';
-	import Reactions from '../../components/Reactions.svelte';
-	import LatestPosts from '../../components/LatestPosts.svelte';
 	import { page } from '$app/stores';
-
-
-	// https://svelte-put.vnphanquang.com/docs/toc
-  import { toc, createTocStore } from '@svelte-put/toc';
-	import TableOfContents from './TableOfContents.svelte';
-	import utterances, {injectScript}  from './loadUtterances'
+	import 'prism-themes/themes/prism-shades-of-purple.min.css';
+	import LatestPosts from '../../components/LatestPosts.svelte';
+	import Reactions from '../../components/Reactions.svelte';
+// https://svelte-put.vnphanquang.com/docs/toc
+  import { createTocStore, toc } from '@svelte-put/toc';
+  import TableOfContents from './TableOfContents.svelte';
+  import utterances, { injectScript } from './loadUtterances';
 
 	// table of contennts
   const tocStore = createTocStore();
@@ -20,7 +17,7 @@
 
 	/** @type {import('./$types').PageData} */
 	export let data;
-	
+
 	/** @type {import('$lib/types').ContentItem} */
 	$: json = data.json; // warning: if you try to destructure content here, make sure to make it reactive, or your page content will not update when your user navigates
 
@@ -96,7 +93,7 @@
 <div class="max-w-2xl mx-auto">
 	{#if json?.tags?.length}
 		<p class="!text-slate-400 flex-auto mb-4 italic">
-			Tagged in: 
+			Tagged in:
 			{#each json.tags as tag}
 				<span class="px-1">
 					<a href={`/blog?filter=hashtag-${tag}`}>#{tag}</a>
@@ -118,14 +115,14 @@
 	<div class="mb-8 text-black dark:text-white " bind:this={commentsEl} use:utterances={{number: issueNumber}}>
 		Loading comments...
 		<!-- svelte-ignore a11y-mouse-events-have-key-events -->
-		<button class="my-4 bg-blue-200 hover:bg-blue-100 text-black p-2 rounded-lg" 
+		<button class="my-4 bg-blue-200 hover:bg-blue-100 text-black p-2 rounded-lg"
 			on:click={() => injectScript(commentsEl, issueNumber)}
 			on:mouseover={() => injectScript(commentsEl, issueNumber)}
 		>Load now</button>
 		<!-- <Comments ghMetadata={json.ghMetadata} /> -->
 	</div>
 
-	<Newsletter />
+	<!-- <Newsletter /> -->
 	<LatestPosts items={data.list} />
 </div>
 
@@ -140,7 +137,7 @@
 			--feature: minmax(0, 5rem);
 
 			display: grid;
-			grid-template-columns: 
+			grid-template-columns:
 				[full-start] var(--full)
 				[feature-start] 0rem
 				[popout-start] 0rem

@@ -4,7 +4,7 @@
 	// import { page } from '$app/stores';
 	import { queryParam, ssp } from 'sveltekit-search-params';
 
-	import { SITE_TITLE, POST_CATEGORIES } from '$lib/siteConfig';
+	import { POST_CATEGORIES, SITE_TITLE } from '$lib/siteConfig';
 
 	import IndexCard from '../../components/IndexCard.svelte';
 	import MostPopular from './MostPopular.svelte';
@@ -41,9 +41,9 @@
 	// https://github.com/sw-yx/swyxkit/pull/171
 	// this will be slow if you have thousands of items, but most people don't
 	let isTruncated = items?.length > 20;
-	
-	
-	
+
+
+
 	// we are lazy loading a fuzzy search function
 	// with a fallback to a simple filter function
 	let loaded = false;
@@ -87,8 +87,8 @@
 		{SITE_TITLE} Blog
 	</h1>
 	<p class="mb-4 text-gray-600 dark:text-gray-400">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sunt reprehenderit alias rerum
-		dolor impedit. In total, I've written {items.length} articles on my blog. Use the search below to
+		I write about AI, ML, Robotics, Reinforcement Learning, and any other topic that's on my mind.
+		In total, I've written {items.length} articles on my blog. Use the search below to
 		filter by title.
 	</p>
 	<div class="relative mb-4 w-full">
