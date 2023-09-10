@@ -7,9 +7,9 @@
 		SITE_TITLE,
 		SITE_URL
 	} from '$lib/siteConfig';
+	import FeatureCard from '../components/FeatureCard.svelte';
 	import LatestPosts from '../components/LatestPosts.svelte';
 	import Newsletter from '../components/Newsletter.svelte';
-
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -51,7 +51,8 @@
 				!
 			</h1>
 			<h2 class="mb-4 text-gray-700 dark:text-gray-200">
-				A place for me to share my thoughts about topics I care about like Reinforcement Learning, AI, ML, Robotics, and Programming!
+				A place for me to share my thoughts about topics I care about like Reinforcement Learning,
+				AI, ML, Robotics, and Programming!
 			</h2>
 			<p class="mb-16 text-gray-600 dark:text-gray-400">
 				<a href={REPO_URL}>View source and feature list here!</a>
@@ -67,7 +68,17 @@
 			Featured Posts
 		</h3>
 		<div class="flex flex-col gap-6 md:flex-row">
-			<!-- <FeatureCard title="Welcome to swyxkit 2022!" href="/welcome" stringData="Jan 2022" /> -->
+			<FeatureCard
+				title="Finally Making a Blog"
+				href="/finally-making-a-blog"
+				stringData="Aug 2023"
+			/>
+			<FeatureCard
+				title="DevLog: Chess Challenge Bot"
+				href="/devlog-1-chess-challenge"
+				stringData="Aug 2023"
+			/>
+		</div>
 	</section>
 
 	<LatestPosts {items} />
