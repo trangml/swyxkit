@@ -39,7 +39,7 @@
 			<NavLink href="/blog">Blog</NavLink>
 		</li>
 		<li>
-			<NavLink href="http://www.trangml.com/about">About</NavLink>
+			<NavLink href="https://www.trangml.com/about">About</NavLink>
 		</li>
 		<!-- <li>
 			<a
