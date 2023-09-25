@@ -30,7 +30,7 @@ const rehypePlugins = [
     rehypeAutoLink,
     {
       behavior: 'wrap',
-      properties: { class: 'hover:text-yellow-100 no-underline' }
+      properties: { class: 'hover:text-green-100 no-underline' }
     }
   ]
 ];

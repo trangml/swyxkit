@@ -3,11 +3,6 @@
 	export let ghMetadata;
 	/** @type {import('$lib/types').GHComment[]} */
 	export let data = [];
-	import { onMount } from 'svelte';
-	onMount(async () => {
-    if (data.length) return; // data has been passed in from above, so dont bother loading
-		data = await (await fetch(ghMetadata.commentsUrl)).json();
-	});
 	import Comment from './Comment.svelte';
 </script>
 
@@ -20,7 +15,7 @@
 	href={`${ghMetadata?.issueUrl}#issuecomment-new`}
 	rel="external noreferrer"
 	target="_blank"
-	class="flex justify-center border-y border-blue-700 p-4 no-underline hover:text-yellow-700 dark:hover:text-yellow-200 sm:inline sm:rounded-xl sm:border-x"
+	class="flex justify-center border-y border-blue-700 p-4 no-underline hover:text-green-700 dark:hover:text-green-200 sm:inline sm:rounded-xl sm:border-x"
 >
 	Leave a new comment!
 </a>
@@ -28,7 +23,7 @@
 <!-- <pre class="prose dark:prose-invert">
   {JSON.stringify(data, null, 2)}
 </pre> -->
-<!-- 
+<!--
 {
   "url": "https://api.github.com/repos/sw-yx/swyxkit/issues/comments/1008454294",
   "html_url": "https://github.com/sw-yx/swyxkit/issues/10#issuecomment-1008454294",

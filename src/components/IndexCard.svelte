@@ -11,7 +11,7 @@
 </script>
 
 <a
-	class="w-full text-gray-900 hover:text-yellow-600 dark:text-gray-100 dark:hover:text-yellow-100 hover:no-underline"
+	class="w-full text-gray-900 hover:text-green-600 dark:text-gray-100 dark:hover:text-green-100 hover:no-underline"
 	{href}
 	><div class="w-full">
 		<div class="flex flex-col justify-between md:flex-row">
@@ -19,7 +19,7 @@
 				{title}
 			</h4>
 		</div>
-		<p class="text-gray-600 mb-2 break-all sm:break-words dark:text-gray-400 hover:text-yellow-600 dark:hover:text-yellow-100">
+		<p class="text-gray-600 mb-2 break-all sm:break-words dark:text-gray-400 hover:text-green-600 dark:hover:text-green-100">
 			<slot />
 		</p>
 		<div class="flex justify-between items-center gap-1 text-left text-gray-500 sm:justify-start sm:flex-row sm:gap-4 md:mb-0 md:text-sm">

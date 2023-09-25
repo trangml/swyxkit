@@ -1,7 +1,7 @@
 export const SITE_URL = 'https://trangml.netlify.app';
 export const APPROVED_POSTERS_GH_USERNAME = ['trangml', 'mattluutrang', 'trangml-mit'];
 export const GH_USER_REPO = 'trangml/swyxkit'; // used for pulling github issues and offering comments
-export const SITE_TITLE = 'TrangML Blog';
+export const SITE_TITLE = 'TrangML';
 export const SITE_DESCRIPTION = "Matthew's Blog";
 export const DEFAULT_OG_IMAGE =
   'https://user-images.githubusercontent.com/6764957/147861359-3ad9438f-41d1-47c8-aa05-95c7d18497f0.png';
