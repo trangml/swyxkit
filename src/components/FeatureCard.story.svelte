@@ -17,6 +17,11 @@
 			</h3>
 			<div class="flex flex-col gap-6 md:flex-row">
 				<FeatureCard
+					title="Why I became an engineer"
+					href="/why-i-became-an-engineer"
+					stringData="Jan 2024"
+				/>
+				<FeatureCard
 					title="Finally Making a Blog"
 					href="/finally-making-a-blog"
 					stringData="Aug 2023"

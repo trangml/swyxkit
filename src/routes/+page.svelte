@@ -9,7 +9,7 @@
 	} from '$lib/siteConfig';
 	import FeatureCard from '../components/FeatureCard.svelte';
 	import LatestPosts from '../components/LatestPosts.svelte';
-	import Newsletter from '../components/Newsletter.svelte';
+	// import Newsletter from '../components/Newsletter.svelte';
 
 	/** @type {import('./$types').PageData} */
 	export let data;
@@ -68,6 +68,11 @@
 		</h3>
 		<div class="flex flex-col gap-6 md:flex-row">
 			<FeatureCard
+				title="Why I became an Engineer"
+				href="/why-i-became-an-engineer"
+				stringData="Jan 2024"
+			/>
+			<FeatureCard
 				title="Finally Making a Blog"
 				href="/finally-making-a-blog"
 				stringData="Aug 2023"
@@ -82,5 +87,5 @@
 
 	<LatestPosts {items} />
 
-	<Newsletter />
+	<!-- <Newsletter /> -->
 </div>

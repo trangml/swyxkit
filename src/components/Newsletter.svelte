@@ -3,7 +3,7 @@
 	import { browser } from '$app/environment';
 	import { writable } from 'svelte/store';
 
-	const defaultValue = true;
+	const defaultValue = false;
 	const initialValue = browser
 		? window.localStorage.getItem('isNewsletterOpen') ?? defaultValue
 		: defaultValue;
